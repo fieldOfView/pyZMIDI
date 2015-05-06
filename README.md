@@ -9,7 +9,12 @@ RTMIDI
 pyZMIDI uses RTMIDI, which you will have to install
 
 Debian/Ubuntu:
-'''
+
+```
 sudo apt-get install libjack-dev
 sudo pip3 install --pre python-rtmidi
-'''
+```
+
+Windows:
+
+Unfortunately installing rtmidi on Windows seems tricky. Stand by for an alternative.
