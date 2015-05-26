@@ -26,8 +26,8 @@ class MidiInputHandler(object):
         
 class MidiInNode(ZOCP):
     # Constructor
-    def __init__(self):
-        super(MidiInNode, self).__init__()
+    def __init__(self, nodename):
+        super(MidiInNode, self).__init__(nodename)
 
 
     def run(self):
@@ -55,8 +55,7 @@ class MidiInNode(ZOCP):
 
                 
 if __name__ == '__main__':
-    z = MidiInNode()
-    z.set_name("zmidi_in@%s" % socket.gethostname())
+    z = MidiInNode("zmidi_in@%s" % socket.gethostname())
 
     port = sys.argv[1] if len(sys.argv) > 1 else None
     try:
